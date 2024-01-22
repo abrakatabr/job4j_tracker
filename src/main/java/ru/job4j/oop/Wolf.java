@@ -1,9 +1,8 @@
 package ru.job4j.oop;
 
 public class Wolf {
-    public void tryEat() {
+    public void tryEat(Ball ball) {
         System.out.println("Колобок, колобок, я тебя съем!");
-        Ball ball = new Ball();
         ball.tryRun(false);
     }
 }
