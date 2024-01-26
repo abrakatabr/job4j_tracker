@@ -37,19 +37,19 @@ public class Book {
         books[3] = cleanCode;
         System.out.println("Выводим созданный массив на косоль:");
         for (Book a : books) {
-            System.out.println(a.name + " - " + a.countOfPages);
+            System.out.println(a.getName() + " - " + a.getCountOfPages());
         }
         Book temp = books[0];
         books[0] = books[3];
         books[3] = temp;
         System.out.println("Меняем местами по индексам 0 и 3:");
         for (Book a : books) {
-            System.out.println(a.name + " - " + a.countOfPages);
+            System.out.println(a.getName() + " - " + a.getCountOfPages());
         }
         System.out.println("Выводим с именем Clean code");
         for (Book a : books) {
             if (a.name.equals("Clean code")) {
-                System.out.println(a.name + " - " + a.countOfPages);
+                System.out.println(a.getName() + " - " + a.getCountOfPages());
             }
         }
     }
