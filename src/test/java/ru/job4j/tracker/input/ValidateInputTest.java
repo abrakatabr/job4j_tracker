@@ -3,6 +3,7 @@ package ru.job4j.tracker.input;
 import org.junit.jupiter.api.Test;
 import ru.job4j.tracker.output.Output;
 import ru.job4j.tracker.output.StubOutput;
+import java.util.List;
 
 import static org.assertj.core.api.Assertions.*;
 
@@ -11,7 +12,7 @@ class ValidateInputTest {
     void whenInvalidInput() {
         Output output = new StubOutput();
         Input in = new MockInput(
-                new String[]{"one", "1"}
+                List.of("one", "1")
         );
         ValidateInput input = new ValidateInput(output, in);
         int selected = input.askInt("Enter menu:");
@@ -22,7 +23,7 @@ class ValidateInputTest {
     void whenValidInput() {
         Output output = new StubOutput();
         Input in = new MockInput(
-                new String[]{"2"}
+                List.of("2")
         );
         ValidateInput input = new ValidateInput(output, in);
         int selected = input.askInt("Enter menu:");
@@ -33,7 +34,7 @@ class ValidateInputTest {
     void whenALotOfValidInput() {
         Output output = new StubOutput();
         Input in = new MockInput(
-                new String[]{"0", "1", "2", "3", "4", "5", "6"}
+                List.of("0", "1", "2", "3", "4", "5", "6")
         );
         ValidateInput input = new ValidateInput(output, in);
         int selected = input.askInt("Enter menu:");
@@ -56,7 +57,7 @@ class ValidateInputTest {
     void whenNegativeNumberInput() {
         Output output = new StubOutput();
         Input in = new MockInput(
-                new String[]{"-1"}
+                List.of("-1")
         );
         ValidateInput input = new ValidateInput(output, in);
         int selected = input.askInt("Enter menu:");
