@@ -19,18 +19,17 @@ public class ReconstructPhrase {
         for (int i = 0; i < evenElements.size() + i; i++) {
             if (i % 2 == 0) {
                 firstString.append(evenElements.pollFirst());
-                continue;
+            } else {
+                evenElements.pollFirst();
             }
-            evenElements.pollFirst();
         }
         return firstString.toString();
     }
 
     private String getDescendingElements() {
         StringBuilder secondString = new StringBuilder();
-        Iterator<Character> iterator = descendingElements.descendingIterator();
-        while (iterator.hasNext()) {
-            secondString.append(iterator.next());
+        for (int i = 0; i < descendingElements.size() + i; i++) {
+            secondString.append(descendingElements.pollLast());
         }
         return secondString.toString();
     }
