@@ -8,6 +8,7 @@ public class UsageMap {
         map.put("Ivan@yandex.ru", "Иван Иванович Иванов");
         map.put("Alex@yandex.ru", "Александр Александрович Александров");
         map.put("Boris@yandex.ru", "Борис Борисовыч Борисов");
+        map.put("Boris@yandex.ru", "Борис Владимирович Владимиров");
         for (String key : map.keySet()) {
             String name = map.get(key);
             System.out.println("ФИО: " + name + ", почта: " + key);
