@@ -3,6 +3,7 @@ package ru.job4j.hashmap;
 import java.util.*;
 
 public class AnalyzeByMap {
+
     public static double averageScore(List<Pupil> pupils) {
         int count = 0;
         double sum = 0D;
@@ -51,7 +52,6 @@ public class AnalyzeByMap {
         }
         return scoreBySubject;
     }
-
 
     public static Label bestStudent(List<Pupil> pupils) {
         List<Label> students = new ArrayList<>();
