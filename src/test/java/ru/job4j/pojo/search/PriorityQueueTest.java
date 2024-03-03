@@ -1,6 +1,8 @@
-package ru.job4j.search;
+package ru.job4j.pojo.search;
 
 import org.junit.jupiter.api.Test;
+import ru.job4j.search.PriorityQueue;
+import ru.job4j.search.Task;
 
 import static org.assertj.core.api.Assertions.*;
 

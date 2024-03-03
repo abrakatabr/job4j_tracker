@@ -1,8 +1,10 @@
-package ru.job4j.search;
+package ru.job4j.pojo.search;
 
 import java.util.ArrayList;
 
 import org.junit.jupiter.api.Test;
+import ru.job4j.search.Person;
+import ru.job4j.search.PhoneDictionary;
 
 import static org.assertj.core.api.Assertions.*;
 
