@@ -42,7 +42,7 @@ public class Analyze {
                         .mapToInt(Subject::score)
                         .sum()))
                 .max((left, right) -> Double.compare(left.score(), right.score()))
-                .orElse(new Tuple("", 0));
+                .orElse(null);
     }
 
     public static Tuple bestSubject(Stream<Pupil> stream) {
