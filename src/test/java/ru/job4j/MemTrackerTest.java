@@ -2,14 +2,15 @@ package ru.job4j;
 
 import org.junit.jupiter.api.Test;
 import ru.job4j.tracker.Item;
-import ru.job4j.tracker.Tracker;
+import ru.job4j.tracker.MemTracker;
+import ru.job4j.tracker.Store;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class TrackerTest {
+public class MemTrackerTest {
     @Test
     public void whenAddNewItemThenTrackerHasSameItem() {
-        Tracker tracker = new Tracker();
+        Store tracker = new MemTracker();
         Item item = new Item();
         item.setName("test1");
         tracker.add(item);
@@ -19,7 +20,7 @@ public class TrackerTest {
 
     @Test
     public void whenReplaceItemIsSuccessful() {
-        Tracker tracker = new Tracker();
+        Store tracker = new MemTracker();
         Item item = new Item("Bug");
         tracker.add(item);
         int id = item.getId();
@@ -30,7 +31,7 @@ public class TrackerTest {
 
     @Test
     public void whenReplaceItemIsNotSuccessful() {
-        Tracker tracker = new Tracker();
+        Store tracker = new MemTracker();
         Item item = new Item("Bug");
         tracker.add(item);
         Item updateItem = new Item("Bug with description");
@@ -41,7 +42,7 @@ public class TrackerTest {
 
     @Test
     public void whenDeleteItemIsSuccessful() {
-        Tracker tracker = new Tracker();
+        Store tracker = new MemTracker();
         Item item = new Item("Bug");
         tracker.add(item);
         int id = item.getId();
@@ -51,7 +52,7 @@ public class TrackerTest {
 
     @Test
     public void whenDeleteItemIsNotSuccessful() {
-        Tracker tracker = new Tracker();
+        Store tracker = new MemTracker();
         Item item = new Item("Bug");
         tracker.add(item);
         tracker.delete(1000);

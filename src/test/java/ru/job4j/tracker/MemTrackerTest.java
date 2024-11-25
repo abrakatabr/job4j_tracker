@@ -6,11 +6,11 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.*;
 
-class TrackerTest {
+class MemTrackerTest {
 
     @Test
     public void whenTestFindById() {
-        Tracker tracker = new Tracker();
+        MemTracker tracker = new MemTracker();
         Item bug = new Item("Bug");
         Item item = tracker.add(bug);
         Item result = tracker.findById(item.getId());
@@ -19,7 +19,7 @@ class TrackerTest {
 
     @Test
     public void whenTestFindAll() {
-        Tracker tracker = new Tracker();
+        MemTracker tracker = new MemTracker();
         Item first = new Item("First");
         Item second = new Item("Second");
         tracker.add(first);
@@ -30,7 +30,7 @@ class TrackerTest {
 
     @Test
     public void whenTestFindByNameCheckArrayLength() {
-        Tracker tracker = new Tracker();
+        MemTracker tracker = new MemTracker();
         Item first = new Item("First");
         Item second = new Item("Second");
         tracker.add(first);
@@ -44,7 +44,7 @@ class TrackerTest {
 
     @Test
     public void whenTestFindByNameCheckSecondItemName() {
-        Tracker tracker = new Tracker();
+        MemTracker tracker = new MemTracker();
         Item first = new Item("First");
         Item second = new Item("Second");
         tracker.add(first);
